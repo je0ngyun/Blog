@@ -1,0 +1,80 @@
+@import '../../styles/utils.scss';
+
+.project-link {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  color: inherit;
+  > div {
+    &:first-child {
+      flex-basis: 28%;
+      padding: 10px 10px 0px 10px;
+      > * {
+        margin-bottom: 5px;
+      }
+    }
+    &:last-child {
+      flex-basis: 72%;
+      padding: 10px;
+      overflow: auto;
+    }
+  }
+}
+
+.project-link {
+  &-title {
+    font-family: Catamaran;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  &-tags {
+    font-family: Catamaran;
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+  }
+  &-tech {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0.7rem;
+    padding-right: 10%;
+    * {
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  &-desc {
+    font-size: 0.95rem;
+    ul {
+      margin: 0;
+      padding: 0 20px;
+    }
+  }
+  &-period {
+    font-size: 0.9rem;
+  }
+}
+
+@include large-tablets {
+  .project-link {
+    > div {
+      &:first-child {
+        flex-basis: 100%;
+      }
+      &:last-child {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .project-link-title {
+    font-size: 1.5rem;
+  }
+}

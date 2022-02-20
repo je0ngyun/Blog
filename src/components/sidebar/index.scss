@@ -1,0 +1,66 @@
+@import '../../styles/utils.scss';
+
+.side-bar {
+  position: fixed;
+  height: 100%;
+  width: 275px;
+  z-index: 999;
+  top: 58px;
+  left: 0;
+  overflow-x: scroll;
+  border-right: 2px solid;
+  border-top: 2px solid;
+  > div {
+    margin-bottom: 7px;
+    border-left: 5px solid #00000000;
+  }
+  @include animation('slideRight', 0.3s);
+}
+
+.side-bar-open-btn {
+  position: fixed;
+  top: 138px;
+  left: 0;
+  width: 20px;
+  height: 70px;
+  border-radius: 0 7px 7px 0;
+  outline: 0;
+  border: 0;
+  svg {
+    position: absolute;
+    left: -2px;
+    top: 20.5px;
+  }
+}
+
+.side-bar-close-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  button {
+    padding-top: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    outline: 0;
+  }
+}
+
+@include large-tablets {
+  .side-bar-open-btn {
+    display: none;
+  }
+}
+
+@include keyframes('slideRight') {
+  from {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

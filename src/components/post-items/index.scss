@@ -1,0 +1,38 @@
+@import '../../styles/utils.scss';
+
+.post-item-container {
+  padding: 15px 20px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  min-height: 160px;
+}
+
+.post-item-info {
+  display: flex;
+  margin-bottom: 10px;
+  font-family: Catamaran;
+  div {
+    margin-right: 4px;
+    font-weight: 600;
+    font-size: 0.97rem;
+  }
+}
+
+.post-item-title {
+  font-family: Catamaran;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.post-item-excerpt {
+  font-size: 0.9rem;
+}
+
+@include mobile() {
+  .post-item-title {
+    font-size: x-large;
+    margin-bottom: 6px;
+  }
+}

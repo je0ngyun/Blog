@@ -1,0 +1,14 @@
+.switch-container {
+  flex-basis: 950px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 40px;
+  padding-right: 5px;
+}
+
+.switch {
+  i {
+    color: #000000 !important;
+  }
+}

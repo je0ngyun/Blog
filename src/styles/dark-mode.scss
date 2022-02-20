@@ -1,0 +1,222 @@
+body.dark {
+  /* body */
+  color: $dark-text-color;
+  background-color: $dark-background-color;
+  text-shadow: $dark-text-shadow;
+  /* body end */
+
+  /* date */
+  .date {
+    color: $dark-text-color-darken-2;
+  }
+  /* date end */
+
+  /* utils */
+  .is-primary {
+    color: $dark-primary-color !important;
+  }
+  /* utils end */
+
+  /* nav-bar */
+  .nav {
+    background-color: $dark-background-color;
+  }
+
+  .nav-title {
+    a {
+      color: $dark-primary-color;
+    }
+  }
+
+  .nav-links {
+    a::after {
+      background-color: $dark-primary-color;
+    }
+  }
+
+  .nav-links--mobile {
+    background-color: $dark-background-color;
+  }
+
+  .nav-underline {
+    background: $dark-nav-underline-background-color;
+  }
+
+  .nav-scroll-gauge {
+    background: $dark-nav-underline-background-color;
+  }
+  /* nav-bar end */
+
+  /* side-bar */
+  .side-bar {
+    background-color: $dark-background-color;
+    border-color: $dark-item-box-border-color;
+  }
+
+  .side-bar-open-btn {
+    background: $dark-primary-color;
+    i {
+      color: $dark-background-color;
+    }
+  }
+
+  .side-bar-catgory-header {
+    &.is-primary {
+      border-color: $dark-primary-color !important;
+    }
+    a:hover {
+      color: $dark-primary-color;
+    }
+  }
+
+  .side-bar-category {
+    &.is-primary {
+      border-color: $dark-primary-color !important;
+    }
+    button {
+      &.is-primary {
+        i {
+          color: $dark-primary-color;
+        }
+      }
+      &:hover {
+        color: $dark-primary-color;
+        i {
+          color: $dark-primary-color;
+        }
+      }
+    }
+  }
+
+  .side-bar-cat-links {
+    a {
+      color: $dark-text-color-darken-2;
+      &:hover {
+        color: $dark-primary-color;
+      }
+    }
+  }
+  /* side-bar end */
+
+  /* markdown */
+  #markdown {
+    blockquote {
+      background-color: $dark-background-color-darken-1;
+      border-color: $dark-primary-color;
+    }
+
+    /* Code blocks */
+    pre[class*='language-'] {
+      background-color: $dark-markdown-code-background-color;
+    }
+
+    /* Inline code */
+    :not(pre) > code[class*='language-'] {
+      background-color: $dark-background-color-darken-1;
+      color: $dark-primary-color;
+    }
+
+    /*table highdark*/
+    table tr:nth-child(2n) {
+      background-color: $dark-background-color-darken-1;
+    }
+  }
+  /* markdown end */
+
+  /* post */
+  .post-tags {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    div {
+      display: inline-block;
+      background: $dark-post-tag-background-color;
+      color: $dark-post-tag-color;
+    }
+  }
+
+  .post-navigator {
+    > div {
+      border-color: $dark-post-navigator-border-color;
+      background-color: $dark-post-navigator-background-color;
+      a {
+        .post-signpost {
+          color: $dark-primary-color;
+        }
+      }
+    }
+  }
+
+  .post-item-container {
+    border-color: $dark-item-box-border-color;
+    box-shadow: $dark-item-box-shadow;
+    &:hover {
+      background: $dark-background-color-darken-1;
+    }
+  }
+
+  .post-item {
+    &-excerpt {
+      color: $dark-text-color-darken-1;
+    }
+  }
+  /* post end */
+
+  /* project-link */
+  .project-link {
+    border-color: $dark-item-box-border-color;
+    box-shadow: $dark-item-box-shadow;
+    &:hover {
+      background-color: $dark-background-color-darken-1;
+    }
+    .project-link-tech {
+      * {
+        color: $dark-primary-color;
+      }
+    }
+    .project-link-period {
+      color: $dark-text-color-darken-2;
+    }
+    .project-link-desc {
+      color: $dark-text-color-darken-1;
+    }
+  }
+  /* project-link end */
+
+  /* search */
+  .search-box {
+    svg * {
+      color: $dark-text-color;
+    }
+    input {
+      border-color: $dark-primary-color;
+    }
+  }
+
+  .search-result-container {
+    background-color: $dark-background-color;
+    border-color: $dark-item-box-border-color;
+    box-shadow: $dark-item-box-shadow;
+  }
+
+  .search-result-item {
+    color: $dark-text-color-darken-1;
+    &:hover {
+      .search-result-title {
+        background-color: $dark-background-color-darken-1;
+        border-color: $dark-item-box-border-color;
+        box-shadow: $dark-item-box-shadow;
+        color: $dark-primary-color;
+      }
+    }
+  }
+  .search-result-title {
+    border-color: $dark-background-color;
+  }
+  /* search end */
+
+  /* page */
+  .page-descripton {
+    color: $dark-text-color-darken-1;
+  }
+  /* page end */
+}

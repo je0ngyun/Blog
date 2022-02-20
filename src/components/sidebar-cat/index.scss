@@ -1,0 +1,17 @@
+.side-bar-category {
+  padding: 10px;
+  button {
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    font-weight: 500;
+    i {
+      position: relative;
+      margin-left: 3px;
+      top: 1.3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+/* lightmode variables */
+$light-text-color: #000000;
+$light-text-color-lighten-1: lighten($light-text-color, 20%);
+$light-text-color-lighten-2: lighten($light-text-color, 40%);
+$light-background-color: #ffffff;
+$light-background-color-darken-1: darken($light-background-color, 3%);
+$light-text-shadow: 0 0 0.6px rgba(0, 0, 0, 0.425);
+$light-primary-color: #4078ac;
+$light-nav-underline-background-color: linear-gradient(
+  90deg,
+  rgba(113, 107, 172, 1) 0%,
+  rgb(75, 146, 146) 51%,
+  rgba(51, 126, 199, 1) 88%
+);
+$light-markdown-code-background-color: #0e1116;
+$light-post-tag-color: #f8f8f8;
+$light-post-tag-background-color: #585858;
+$light-post-navigator-background-color: #f6f8fa;
+$light-post-navigator-border-color: #e0e4e8;
+$light-item-box-border-color: #ecf0f2;
+$light-item-box-shadow: 0 1px 5px #00000024, 0 1px 1px #a9ceff63;
+/* lightmode variables end*/
+
+/* darkmode variables */
+$dark-text-color: #ffffff;
+$dark-text-color-darken-1: darken($dark-text-color, 15%);
+$dark-text-color-darken-2: darken($dark-text-color, 30%);
+$dark-background-color: #282c35;
+$dark-background-color-darken-1: darken($dark-background-color, 2%);
+$dark-text-shadow: 0 0 0.6px rgba(255, 255, 255, 0.425);
+$dark-primary-color: #6dc9e7;
+$dark-nav-underline-background-color: linear-gradient(
+  90deg,
+  rgba(88, 91, 181, 1) 0%,
+  rgba(81, 172, 228, 1) 36%,
+  rgba(109, 201, 231, 1) 64%,
+  rgb(123, 167, 248) 100%
+);
+$dark-markdown-code-background-color: #0e1116;
+$dark-post-tag-background-color: #585858;
+$dark-post-tag-color: #f8f8f8;
+$dark-post-navigator-background-color: #202020;
+$dark-post-navigator-border-color: #343434;
+$dark-item-box-border-color: #24262e;
+$dark-item-box-shadow: 0px 1px 10px #111314, 0 1px 1px #2e333d;
+/* darkmode variables end */
