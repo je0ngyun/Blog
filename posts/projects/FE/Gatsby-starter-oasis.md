@@ -93,5 +93,4 @@ const pageMetadata = {
 
 ## Learned it
 
-인터섹션 옵저버
-스크롤게이지 rFA
+작성중입니다.
