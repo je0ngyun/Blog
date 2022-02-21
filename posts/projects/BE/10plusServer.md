@@ -141,7 +141,7 @@ response-body : success(boolean),device(object)
 
 중계서버는 각 **기기상태가 변화할때마다** 다음과 같은 DB테이블에 상태를 저장합니다.
 
-<img src = "https://github.com/ye0reum/ye0reum.github.io/blob/master/src/images/project-imgs/10plus-server/DB%ED%85%8C%EC%9D%B4%EB%B8%94.png?raw=true" width="80%">
+<img src = "https://user-images.githubusercontent.com/33706043/154886608-0c8de80d-381b-424c-9c31-e69c6911648b.png" width="80%">
 
 DB 쿼리실행을 위해 쿼리빌더(Knex 라이브러리)를 이용하였습니다.
 
@@ -164,7 +164,7 @@ DB 쿼리실행을 위해 쿼리빌더(Knex 라이브러리)를 이용하였습�
 
 아래의 이미지는 위의 단계를 나타낸 것 입니다.</br>
 
-<img src = "https://github.com/ye0reum/ye0reum.github.io/blob/master/src/images/project-imgs/10plus-server/%EC%9D%B8%EC%A6%9D.png?raw=true" width="80%">
+<img src = "https://user-images.githubusercontent.com/33706043/154886681-271914a4-dc28-420b-8654-f867507f81f5.png" width="80%">
 
 ## API Document
 

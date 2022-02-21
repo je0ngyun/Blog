@@ -5,7 +5,7 @@ tags: 'SpringBoot,Jenkins,Docker,CI,CD,WebHook,Git,Branch'
 ---
 
 지난 포스팅에서 SpringBoot 프로젝트를 Jenkins 를 이용하여 Docker Image 기반으로 수동으로 배포하는 법을
-소개하였다. [**SpringBoot + Jenkins + Docker 로 CI/CD 구성하기**](https://je0ngyun.github.io/devops/spring-boot-jenkins-ci-cd)  
+소개하였다. [**SpringBoot + Jenkins + Docker 로 CI/CD 구성하기**](https://je0ngyun.netlify.app/develop/devops/spring-boot-jenkins-ci-cd/)  
 이번 포스팅에서는 수동으로 Jenkins 에서 빌드하여 배포하던 프로세스를 Github 에서 특정 Branch로 Push 이벤트가 발생시 자동으로 빌드하는 방법을 적용해 보려고 한다.
 
 기본적으로 Jenkins 에서 지원하는 `GitHub hook trigger for GITScm polling` 를 이용하여 Webhook 설정을 할 경우에 모든 Branch push 이벤트에 대하여 Jenkins build 가 Trigger 되기 때문에 특정 Branch의 push 이벤트에서만 Jenkins build 를 원할 경우에는 `Jenkins Generic Webhook Trigger` 라는 플러그인을 이용하여야 한다.

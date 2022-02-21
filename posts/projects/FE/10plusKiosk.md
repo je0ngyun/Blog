@@ -87,19 +87,19 @@ router.get('/', (req, res, next) => {
 
 메인화면
 
-<img src = "https://github.com/ye0reum/ye0reum.github.io/blob/master/src/images/project-imgs/10plus-kiosk/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4.png?raw=true" width="80%">
+<img src = "https://user-images.githubusercontent.com/33706043/154886819-9284bd60-ae7e-4f1e-85a7-d9451ff8bb54.png" width="80%">
 
 로그보기 화면
 
-<img src = "https://github.com/ye0reum/ye0reum.github.io/blob/master/src/images/project-imgs/10plus-kiosk/%EB%A1%9C%EA%B7%B8%EB%B3%B4%EA%B8%B0.png?raw=true" width="80%">
+<img src = "https://user-images.githubusercontent.com/33706043/154886862-14b943a9-177d-4b25-a483-8daee180cadb.png" width="80%">
 
 새로고침 설정화면
 
-<img src = "https://github.com/ye0reum/ye0reum.github.io/blob/master/src/images/project-imgs/10plus-kiosk/%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8%EC%84%A4%EC%A0%95.png?raw=true" width="80%">
+<img src = "https://user-images.githubusercontent.com/33706043/154886893-3f36abe6-3dcd-44cd-b1a9-a7878323ce56.png" width="80%">
 
 테마 설정화면
 
-<img src = "https://github.com/ye0reum/ye0reum.github.io/blob/master/src/images/project-imgs/10plus-kiosk/%ED%85%8C%EB%A7%88%EC%84%A4%EC%A0%95.png?raw=true" width="80%">
+<img src = "https://user-images.githubusercontent.com/33706043/154886917-33c5308e-c75d-4303-8893-29ee7e452166.png" width="80%">
 
 ## 주요기능
 
