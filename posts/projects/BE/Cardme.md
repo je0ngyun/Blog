@@ -5,7 +5,7 @@ tags: "자신을 소개하는 간단한 카드형식의 SVG를 제공하는 서�
 tech: "Java,SpringBoot,SpringSecurity,JPA,MySql"
 period: "2021.09 ~ 2021.11"
 desc: "백엔드 부분으로 REST API 구축;기본적인 회원관련 처리 및 사용자가 작성한 정보를 바탕으로 SVG를 생성
-;카드생성후 img 태그의 src 속성으로 API요청을 하여 손쉽게 SVG를 제공;개발을 진행하며 IoC DI AOP 등의 개념을 더욱 확고히 숙지하려 노력;여러 구성 부분에서 Best Practice가 무엇인지 생각하며 개발;SpringSecurity를 통한 토큰 기반 인증 방식 적용;Let's Encrypt를 이용한 SSL 적용"
+;카드생성후 img 태그의 src 속성으로 API요청을 하여 손쉽게 SVG를 제공;개발을 진행하며 IoC DI AOP 등의 개념을 더욱 확고히 숙지하려 노력;여러 구성 부분에서 Best Practice가 무엇인지 생각하며 개발;SpringSecurity를 통한 토큰 기반 인증 방식 적용;Let's Encrypt를 이용한 SSL 적용;팀구성 -- 1인"
 ---
 
 ## 목차

@@ -4,7 +4,7 @@ date: '2021-07-22'
 tags: '스마트홈 중계서버'
 tech: 'NodeJS,Express,Socket.io,MQTT,UDP,Jwt,MySql'
 period: '2021.03 ~ 2021.05'
-desc: 'IoT 기기들을 관리하고 동작시키며 웹서버와 각 IoT 기기를 연결하는 중계서버;Express 프레임워크를 이용하여 개발;MySQL DB를 사용하여 각 기기 정보를 유지;토큰 기반 인증 방식을 적용;IoT 기기들과의 통신에 MQTT 프로토콜을 사용;인증코드 표출 이벤트를 위해 WebSocket을 사용;RaspbianOS 위에서 실행되며 사용자의 가정에 설치'
+desc: 'IoT 기기들을 관리하고 동작시키며 웹서버와 각 IoT 기기를 연결하는 중계서버;Express 프레임워크를 이용하여 개발;MySQL DB를 사용하여 각 기기 정보를 유지;토큰 기반 인증 방식을 적용;IoT 기기들과의 통신에 MQTT 프로토콜을 사용;인증코드 표출 이벤트를 위해 WebSocket을 사용;RaspbianOS 위에서 실행되며 사용자의 가정에 설치;팀구성 -- 1인'
 ---
 
 ## 목차
