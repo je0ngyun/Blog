@@ -73,6 +73,9 @@
 
   /* Code blocks */
   pre[class*='language-'] {
+    * {
+      font-size: 0.9rem;
+    }
     padding: 1rem;
     overflow: auto;
     border-radius: 7px;
