@@ -13,7 +13,6 @@ desc: '과거에 진행했던 개인 블로그 프로젝트를 리펙토링 및 
 
 > - [Motivation](#motivation)
 > - [Key Functions](#key-functions)
-> - [Some Folder Structure](#some-folder-structure)
 > - [Learned it](#learned-it)
 
 ## Motivation
@@ -93,4 +92,26 @@ const pageMetadata = {
 
 ## Learned it
 
-작성중입니다.
+### State의 lazy initialization
+
+State의 초기값으로 비싼비용의 계산이 필요할 경우 laze 초기화를 통해 리 렌더링시 불필요한 계산을 줄이는 법을 배웠고 최초 렌더링 시에만 해당 값이 필요할함과 동시에
+`localStorage` 의 접근 및 `배열조작의` 결과물을 State로 써야한다면 laze 초기화를 적극적으로 활용해야한다는 것을 알게되었습니다.  
+해당 프로젝트에서 사이드바를 열었을때 현재 보고있는 페이지의 카테고리를 하이라이팅함과 동시에 자동적으로 열리게 구현하였고 이를 위해 categoryStatus 라는 State를 lazy 초기화 하였습니다.
+
+### CSR, SSR, SSG 의 개념
+
+Gatsby 프레임워크에서 제공하는 `useStaticQuery` Custom hook이 반환하는 결과값이 같아도 변경된것으로 간주되어 [리렌더링을 유발하는 이슈가](https://github.com/gatsbyjs/gatsby/issues/29011) 있었습니다.
+찾아본 결과 이러한 현상은 부분적으로 의도된것이며 SSG는 빌드시에 HTML을 모두 생성하기 때문에 개발시에만 영향이 있고 실제 배포에는 영향이 없다는 것을 알게됨과 동시에 여러 렌더링 방식에 대한 개념이 부족한 것 같아서
+CSR, SSR, SSG 및 TTV,TTI 에대한 개념과 렌더링 방식들간에 어떤차이가 있고 어떠한 상황에 써야할지 공부해보는 시간을 가졌습니다.
+
+### Intersection Observer
+
+페이지내 포스트아이템의 무한스크롤을 구현하기 위해 메인쓰레드에 영향을 줄 수 있고 리플로우를 유발하는 Scroll Event 대신 Intersection Observer를 공부하여 적용하였습니다.
+해당 기능구현시 5개씩 포스트아이템이 추가되도록 하였으며 5개씩 포스트를 불러올때 맨 마지막 포스트를 관찰하도록 하였고 관찰되는 아이템박스가 Viewport 안에 들어오면 연속해서 5개의 포스트를 불러옴과 동시에
+관찰대상을 바꾸어주었습니다.
+
+### requestAnimationFrame
+
+스크롤 게이지바를 적용하기 위해 스크롤 이벤트를 등록해야했습니다. 이때
+requestAnimationFrame을 사용한 throttle로 브라우저가 처리할수 있는 범위내에서 이벤트를 처리하는 방법을 알게되었으며 Javascript의 이벤트루프와 태스크큐에대해 다시 공부해 보며 왜
+setTimeout의 시간이 정확하지 않을 수 있는지 requestAnimationFrame 으로 어떻게 최적화 할 수 있는지를 배우게 되었습니다.
