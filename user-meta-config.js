@@ -6,8 +6,8 @@ const userMetadata = {
   copyright: `Copyright ⓒ 2021 je0ngyun/JeongYun`,
   siteUrl: `https://je0ngyun.netlify.app`, // Enter the URL to deploy or deploy. Used to create a Sitemap and create Robots.txt.
   commentRepo: `je0ngyun/Blog`, // Please enter the Github repository where comments will be saved.
-  googleVerification: ``, // Please enter the verification code from Google Search Console.
-  naverVerification: ``, // Please enter the verification code from Naver Serarch Console.
+  googleVerification: `gVXI8__9H5fEKSWQJR8C7GRAdoYu_qkhdlKiDvpZa0w`, // Please enter the verification code from Google Search Console.
+  naverVerification: `aa0d93dcccc985477f1ce8f20369c12c25cfba7e`, // Please enter the verification code from Naver Serarch Console.
   googleAnalyticsTrackingId: ``, // Please enter the TrackingId from GoogleAnalytics.
 }
 
