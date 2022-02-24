@@ -13,6 +13,10 @@
 오늘보다 내일 더 성장하는 개발자가 되기 위해 노력합니다.  
 <br/>
 
+### Portfolio
+
+- [Portfolio - KR](https://crimson-cattle-a0a.notion.site/49d7c48b89404be2b153e0eb84585ab5)
+
 ### Contact
 
 - jeongyunniim@gmail.com
