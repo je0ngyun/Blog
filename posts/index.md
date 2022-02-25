@@ -17,10 +17,10 @@
 
 - [Portfolio - KR](https://crimson-cattle-a0a.notion.site/49d7c48b89404be2b153e0eb84585ab5)
 
-### Contact
-
-- jeongyunniim@gmail.com
-
 ### Channel
 
 - [Github](https://github.com/je0ngyun)
+
+### Contact
+
+- jeongyunniim@gmail.com
