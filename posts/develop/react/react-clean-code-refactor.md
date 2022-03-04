@@ -152,6 +152,8 @@ const Reservation = ({ title }: ReservationProps) => {
 
 ### Example after refactoring
 
+![after-refactor-example](../react/react-clean-code-refactor-img/ '#width=50%')
+
 ## 결론
 
 이해하기 쉬운 Clean Code를 작성하는 것은 중요하다. 개발을 하면서 기능을 추가하다 보면 읽기 어려운 코드가 생기는 것은 피할 수 없고
