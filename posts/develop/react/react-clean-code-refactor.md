@@ -13,6 +13,8 @@ Clean Code를 작성하는 것이 중요하다고 생각한다.
 예시로 아래와 같이 예약기능을 간단히 만들어 보았다. 예약버튼을 누르면 선택한 날짜로 예약을 요청하되 만약 약관동의 등 사용자가 필수로 확인해야할 내용을
 보지 않았다면 팝업창을 띄우게 하였다.
 
+![예제기능](./react-clean-code-refactor-img/example.gif '#width=50%')
+
 ## Code before refactoring
 
 ```jsx{7,10,12,13}
