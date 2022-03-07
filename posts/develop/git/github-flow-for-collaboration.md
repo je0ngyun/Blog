@@ -68,7 +68,7 @@ Github flow의 핵심인 자동화는 개인적으로 프론트엔드 개발시�
 
 4. **작업이 끝나면 PR을 날린다.**
 
-   - 자신이 작업햇던 branch를 develop branch로 merge 한다.
+   - 자신이 작업했던 branch를 develop branch로 merge 한다.
    - 연관된 issue 번호를 태그한다.
 
 5. **정기적으로 develop branch를 master로 merge해 배포한다.**
