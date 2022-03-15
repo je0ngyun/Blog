@@ -117,7 +117,7 @@ const CreateDeffered = (() => {
 
 우선 Promise를 상속받아 동작하도록 하였고 클로저를 이용하여 Promise의 콜백함수의 resolve와 reject를 밖으로 빼내었다.  
 그 후 Deffered 클래스의 resolve와 reject 멤버에 할당하여 외부에서 Promise의 상태를 변경가능케 하였다.
-또한 생성자의 매개변수로 executor를 넣어주어 Promise의 후속처리 메서드인 then 메서드와 catch메서드로 작동가능케 하였다.
+또한 생성자의 매개변수로 executor를 넣어주어 Promise의 후속처리 메서드인 then 메서드와 catch메서드도 작동가능케 하였다.
 그럼 Deffered를 사용하여 async function에서 일정시간뒤 return하는 코드를 작성해 보자.
 
 ```js{2,6,7}
@@ -139,7 +139,7 @@ Deferred 객체와 async function의 상태를 연계되어 작동하는것을 �
 
 이렇게 연계하여 작성하는 방식의 장점은 무엇이 있을까? 솔직히 이러한 방법이 Best Practice인지는 모르겠으나
 내가 사용하며 느낀 장점은 추가적인 Promise객체관련 로직을 작성하지 않아서인지 드러나는것은 async/await 밖에 없으므로
-좀더 코드가 동기적으로 보이고 깔끔해진것 같았고 핵심로직 작성에만 집중할 수 있었던것 같다.
+좀더 코드가 동기적으로 보여 깔끔해진것 같았고 핵심로직 작성에만 집중할 수 있었던것 같다.
 
 ## 응용해보기
 
