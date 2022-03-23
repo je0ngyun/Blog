@@ -5,7 +5,7 @@ tags: 'React,Styled,Recoil,DarkMode,Theme'
 ---
 
 현재 나는 언제든지 프로젝트를 빠르게 진행 할 수 있게 하기위해 나를 위한 보일러플레이트를 만드는 중이다.
-eslint와 caro를 적용하였고 Toast, Popup컴포넌트와 상태관리, 테마변경, 선언적 에러처리 기능을 포함시켰다. 앞으로 로그인 기능만 포함시키면 끝이다.  
+eslint와 craco를 적용하였고 Toast, Popup컴포넌트와 상태관리, 테마변경, 선언적 에러처리 기능을 포함시켰다. 앞으로 로그인 기능만 포함시키면 끝이다.  
 이번 포스트에서는 이중에서 테마변경에 관한 내용을 작성해보려고 한다.
 
 테마변경 기능을 구현하기 위해서 **Recoil, Styled-components, Local-storage**를 알고 있어야 한다.  
