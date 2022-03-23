@@ -165,14 +165,14 @@ const StDiv = styled.div`
 
 적용한 결과는 위와 같다. 버튼을 눌렀을때 테마 변경은 정상적으로 이루어지지만 새고로침을 하였을때
 테마가 유지 되지 않고 풀려버린다.  
-이것을 해결하기위해 localStroage를 이용해보도록 하자.
+이것을 해결하기위해 localStorage를 이용해보도록 하자.
 
-## 테마 변경 버튼을 눌렀을때 localStroage에도 상태를 저장하기
+## 테마 변경 버튼을 눌렀을때 localStorage에도 상태를 저장하기
 
-일단 테마변경 버튼을 눌렀을때 전역상태를 변경하는것 뿐만 아니라 localStroage에도 상태를 저장하도록 하겠다.  
+일단 테마변경 버튼을 눌렀을때 전역상태를 변경하는것 뿐만 아니라 localStorage에도 상태를 저장하도록 하겠다.  
 Recoil를 사용하는 경우 [AtomEffact](https://recoiljs.org/docs/guides/atom-effects/#local-storage-persistence)를 사용하여
-전역상태가 바뀔때의 SideEffact로 localStroage에도 저장해줄수 있어 보인다.  
-하지만 이번 글에서는 직접 localStroage에 저장시켜 보겠다.
+전역상태가 바뀔때의 SideEffact로 localStorage에도 저장해줄수 있어 보인다.  
+하지만 이번 글에서는 직접 localStorage에 저장시켜 보겠다.
 
 ```tsx
 // src/components/ThemeSwitch/index.tsx
@@ -238,7 +238,7 @@ function App() {
 }
 ```
 
-위와같이 localStroage에 값이 있으면 전역상태를 업데이트하게 되고 결과적으로 전역상태에 의존적이던
+위와같이 localStorage에 값이 있으면 전역상태를 업데이트하게 되고 결과적으로 전역상태에 의존적이던
 theme 변수가 변경이되기 때문에 테마 변경이 이루어진다.
 
 ## Result
