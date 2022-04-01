@@ -144,8 +144,13 @@ reset 함수를 얻어와 ErrorBoundary에 넘겨주었다 이로써 이reset �
 ## 3. DefaultErrorFallback
 
 위에서 사용된 DefaultErrorFallback은 ErrorBoundary로부터 넘겨받은 resetBoundary Props를 통하여 에러가 생겼을때 재시도 할 수 있게 하였다.
-재시도 버튼을 눌러 resetBoundary가 실행되면 ErrorBoundary의 상태가 초기화 되며 re-render가 발생하며 하위의 자식 컴포넌트도 re-render돼며
-api 요청을 다시 수행한다.
+<<<<<<< HEAD
+재시도 버튼을 눌러 resetBoundary가 실행되면 ErrorBoundary의 상태가 초기화 되며 re-render가 발생하여 하위의 자식 컴포넌트도 re-render되어
+=======
+재시도 버튼을 눌러 resetBoundary가 실행되면 ErrorBoundary의 상태가 초기화 되며 re-render가 발생하여 하위의 자식 컴포넌트도 re-render되어
+
+> > > > > > > master
+> > > > > > > api 요청을 다시 수행한다.
 
 ```tsx
 interface Props {
