@@ -131,10 +131,10 @@ package-lock.json
 ### 2. next start 시 permission denied 경우
 
 해결하는데 가장 시간을 많이 소비했던 이슈이다 포트를 8080으로 하여 앱을 실행하였음에도 불구하도
-Bad Gateway가 뜨며 환경의 상태가 Warning으로 표시되길래 로그를 봤더니 Elb가 npm start를
+Bad Gateway가 뜨며 환경의 상태가 Warning으로 표시되길래 로그를 봤더니 Elb가 `npm start`를
 하여 앱을 구동시킬때 `node_modules/.bin/next` 실행파일을 이용하는데 그 과정에서 권한문제 permission denied 때문에 앱이 시작되지 않은것이었다.
 
-해결방법으로는 Elb가 앱을 구동시키기 전에 `node_modules/.bin/next` 경로의 next 파일에 실행권한을 주는 것이었다. Procfile이나 package.json 상에서 권한을 올려주는 것으로는 해결할 수 없고 프로젝트의 루트에
+해결방법으로는 Elb가 앱을 구동시키기 전에 `node_modules/.bin/next` 경로의 next 파일에 실행권한을 주는 것이었다. `Procfile`이나 `package.json` 상에서 권한을 올려주는 것으로는 해결할 수 없고 프로젝트의 루트에
 `.ebextensions`이라는 구성파일이 들어가는 폴더를 만들고 그 안에 구성파일을 넣어주어야한다.
 
 AWS의 개발자 안내서를 보면 사용할 수 있는 [여러 구성파일 명령](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/customize-containers-ec2.html)을 볼 수 있다.
@@ -149,6 +149,17 @@ container_commands:
 ```
 
 위와같이 `.ebextensions` 폴더에 `00_grant_next_file.config` 이란 설정파일을 하나 만들어주고 `container_commands` 명령을 적어주었다.
-그 후 젠킨스에서 S3에 업로드할때 .ebextensions 폴더도 같이 업로드 하도록 하였다.
+그 후 젠킨스에서 S3에 업로드할때 `.ebextensions` 폴더도 같이 업로드 하도록 하였다.
 이제 Elb가 애플리케이션 버전 아카이브의 압축 (우리가 S3에 올린 빌드파일 압축본)을 해제하고 다음의 명령을 실행시켜
-next 파일의 실행 권한을 변경시켜주어 정상적으로 next start 명령어가 실행 될 수 있게 되었다.
+next 파일의 실행 권한을 변경시켜주어 정상적으로 `next start` 명령어가 실행 될 수 있게 되었다.
+
+### 3. Client Side와 Server Side 작업의 환경변수 분리필수
+
+next앱에서 Client Side에서 환경변수에 접근하기 위해서는 환경변수 이름을 `NEXT_PUBLIC_` 로 시작하게 지어야 한다는 것은 알고 있었고 올바르게 환경변수를 Elb상에서 등록해주었지만
+배포시 설정했던 환경변수를 읽을 수 없어 Undefined로 초기화 되었었다.
+
+해결 방법은 나의 배포 프로세스처럼 Jenkins에서 Next앱을 빌드할 때는 Client Side에서 사용하는 환경변수를 당연히
+Jenkins쪽에 설정해주어야 한다. 이유는 앱을 build할때 환경변수가 복사되어 들어가기 때문이다.
+
+하지만 반대로 Server Side에서 사용할 환경변수라면 서버가 구동되는 환경인 Elb쪽에 환경변수를
+설정해주어야 한다. 결론적으로는 Client Side에서 필요한 환경변수라면 Jenkins에 Server Side에서 필요한 환경변수라면 Elb에 설정해주면 된다.
