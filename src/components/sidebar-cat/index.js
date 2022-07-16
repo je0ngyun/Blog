@@ -23,6 +23,7 @@ const SidebarCat = ({
   isHighlight,
   isOpen,
   handleCategoryClick,
+  numOfPost,
 }) => {
   return (
     <div
@@ -34,6 +35,11 @@ const SidebarCat = ({
         }}
       >
         {capitalize(categoryName)}
+        <div>
+          <span>{'('}</span>
+          <span className="num-of-post">{numOfPost}</span>
+          <span>{')'}</span>
+        </div>
         {getArrowIcon(isOpen)}
       </button>
       {isOpen && children}

@@ -60,6 +60,7 @@ const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
         isOpen={getCategoryStatus(dirName)}
         handleCategoryClick={handleCategoryClick}
         key={dirName}
+        numOfPost={filteredPosts.length}
       >
         <SidebarCatLinks posts={filteredPosts} currentPostId={currentPostId} />
       </SidebarCat>
