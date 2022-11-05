@@ -16,7 +16,7 @@ const Index = ({ data }) => {
   const projects = data.posts.nodes
   const directorys = data.directorys.nodes
   const description =
-    'The major projects that have been carried out so far are sorted in order of recent development.'
+    '학부 시절 및 취업 후 사이드 프로젝트로 진행했던 주요 프로젝트들이며 최근 개발순으로 정렬되어있습니다.'
 
   return (
     <Layout belongs={topLevelPathName}>
