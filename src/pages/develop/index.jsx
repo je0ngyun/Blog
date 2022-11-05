@@ -3,21 +3,20 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Layout } from '../../components/Layout'
 import { Seo } from '../../components/Seo'
-import { Sidebar } from '../../components/sidebar'
+import { Sidebar } from '../../components/Sidebar'
 import { PostItems } from '../../components/PostItems'
 import { PageDescription } from '../../components/PageDescription'
 import { PageTitle } from '../../components/PageTitle'
 import { capitalize } from '../../utils/capitalize'
 import { useTopLevelPathName } from '../../hooks'
 
-import './index.scss'
-
 const Index = ({ data }) => {
   const topLevelPathName = useTopLevelPathName()
   const pageName = capitalize(topLevelPathName)
   const posts = data.posts.nodes
   const directorys = data.directorys.nodes
-  const description = 'DS#####'
+  const description =
+    'It contains posts about concepts and troubleshooting processes required during development.'
 
   return (
     <Layout belongs={topLevelPathName}>
@@ -37,10 +36,10 @@ Index.propTypes = {
 export default Index
 
 export const qurey = graphql`
-  query PN#####Page {
+  query DevelopPage {
     directorys: allDirectory(
       filter: {
-        sourceInstanceName: { eq: "PN#####" }
+        sourceInstanceName: { eq: "develop" }
         relativeDirectory: { regex: "/^$|^\\.\\.$/" }
       }
       sort: { order: DESC, fields: relativeDirectory }
@@ -52,7 +51,7 @@ export const qurey = graphql`
     }
     posts: allFile(
       filter: {
-        sourceInstanceName: { eq: "PN#####" }
+        sourceInstanceName: { eq: "develop" }
         absolutePath: { regex: "/.md$/" }
       }
       sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }

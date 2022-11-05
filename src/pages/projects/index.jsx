@@ -3,21 +3,20 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Layout } from '../../components/Layout'
 import { Seo } from '../../components/Seo'
-import { Sidebar } from '../../components/sidebar'
-import { PostItems } from '../../components/PostItems'
+import { Sidebar } from '../../components/Sidebar'
+import { ProjectList } from '../../components/ProjectList'
 import { PageDescription } from '../../components/PageDescription'
 import { PageTitle } from '../../components/PageTitle'
 import { capitalize } from '../../utils/capitalize'
 import { useTopLevelPathName } from '../../hooks'
 
-import './index.scss'
-
 const Index = ({ data }) => {
   const topLevelPathName = useTopLevelPathName()
   const pageName = capitalize(topLevelPathName)
-  const posts = data.posts.nodes
+  const projects = data.posts.nodes
   const directorys = data.directorys.nodes
-  const description = 'DS#####'
+  const description =
+    'The major projects that have been carried out so far are sorted in order of recent development.'
 
   return (
     <Layout belongs={topLevelPathName}>
@@ -25,7 +24,7 @@ const Index = ({ data }) => {
       <Sidebar directorys={directorys} currentCategoryName={topLevelPathName} />
       <PageTitle title={pageName} />
       <PageDescription description={description} />
-      <PostItems posts={posts} />
+      <ProjectList projects={projects} />
     </Layout>
   )
 }
@@ -37,10 +36,10 @@ Index.propTypes = {
 export default Index
 
 export const qurey = graphql`
-  query PN#####Page {
+  query ProjectPage {
     directorys: allDirectory(
       filter: {
-        sourceInstanceName: { eq: "PN#####" }
+        sourceInstanceName: { eq: "projects" }
         relativeDirectory: { regex: "/^$|^\\.\\.$/" }
       }
       sort: { order: DESC, fields: relativeDirectory }
@@ -52,22 +51,27 @@ export const qurey = graphql`
     }
     posts: allFile(
       filter: {
-        sourceInstanceName: { eq: "PN#####" }
+        sourceInstanceName: { eq: "projects" }
         absolutePath: { regex: "/.md$/" }
       }
-      sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
+      sort: {
+        fields: childrenMarkdownRemark___frontmatter___period
+        order: DESC
+      }
     ) {
       nodes {
         sourceInstanceName
         childMarkdownRemark {
           frontmatter {
-            date(formatString: "MMMM DD , YYYY")
             title
+            tags
+            tech
+            desc
+            period
           }
           fields {
             slug
           }
-          excerpt(truncate: true)
           id
         }
       }

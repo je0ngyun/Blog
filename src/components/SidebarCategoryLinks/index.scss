@@ -1,0 +1,25 @@
+@import '../../styles/utils.scss';
+
+.side-bar-cat-links {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px 0px 15px;
+  gap: 5px;
+  a {
+    font-size: 0.95rem;
+    word-break: keep-all;
+    margin-bottom: 5px;
+  }
+  @include animation('slideDown', 0.3s);
+}
+
+@include keyframes('slideDown') {
+  from {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
