@@ -2,22 +2,29 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useEffect } from 'react'
 import * as Dom from '../../utils/dom'
+import { useState } from 'react'
+
 import './index.scss'
 
 const TableOfContent = ({ toc }) => {
+  const [intersectingElement, setIntersectingElement] = useState()
+
   const onIntersect = async ([entry]) => {
     const {
       target: { id },
     } = entry
     if (entry.isIntersecting) {
-      const headingTarget = Dom.getElement(`a[href*="${encodeURI(id)}"]`)
-      headingTarget?.classList.add('toc-highlight')
-    }
-    if (!entry.isIntersecting) {
-      const headingTarget = Dom.getElement(`a[href*="${encodeURI(id)}"]`)
-      headingTarget?.classList.remove('toc-highlight')
+      const intersectingElement = Dom.getElement(`a[href*="${encodeURI(id)}"]`)
+      setIntersectingElement((prevIntersectingElement) => {
+        prevIntersectingElement?.classList.remove('toc-highlight')
+        return intersectingElement
+      })
     }
   }
+
+  useEffect(() => {
+    intersectingElement?.classList.add('toc-highlight')
+  }, [intersectingElement])
 
   useEffect(() => {
     const observer = []
