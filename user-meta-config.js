@@ -1,10 +1,10 @@
 const userMetadata = {
   title: `Jeongyun.log`, // Blog title - Used for display in the navbar and used for SEO.
   description: `배우고 기록하고 성장하자.`, //Blog Description - Used for SEO.
-  author: `Je0ngyun`,
+  author: `Jeongyun`,
   otherSite: `https://github.com/je0ngyun`, // Please enter the address of another site such as Facebook, Twitter, or Github.
   copyright: `Copyright ⓒ 2021 je0ngyun/JeongYun`,
-  siteUrl: `https://je0ngyun.netlify.app`, // Enter the URL to deploy or deploy. Used to create a Sitemap and create Robots.txt.
+  siteUrl: `https://jeongyunlog.netlify.app`, // Enter the URL to deploy or deploy. Used to create a Sitemap and create Robots.txt.
   commentRepo: `je0ngyun/Blog`, // Please enter the Github repository where comments will be saved.
   googleVerification: ``, // Please enter the verification code from Google Search Console.
   naverVerification: ``, // Please enter the verification code from Naver Serarch Console.
