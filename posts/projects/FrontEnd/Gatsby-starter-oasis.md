@@ -7,7 +7,7 @@ period: '2022.02 ~ 2022.02'
 desc: '과거에 진행했던 개인 블로그 프로젝트를 리펙토링 및 기능추가하여 제작;하이라이트 기반 UI와 Github Typography 베이스;페이지 기반으로 포스트 관심사들을 1차 분류;페이지내 사이드바의 카테고리로 2차 세부 분류;쉬운 블로그 세팅을 위해 하나의 Config 파일로 통합;빠른 페이지 생성을 위한 CLI tool 제공;포스트 검색기능 제공;Lighthouse Report를 참고하여 퍼포먼스를 향상;GA, SEO, RSS, Sitemap, Robots.txt 적용 및 제공'
 ---
 
-![main-intro](../FE/Gatsby-starter-oasis-img/intro-img.png)
+![main-intro](../FrontEnd/Gatsby-starter-oasis-img/intro-img.png)
 
 ## Table Of Contents
 
@@ -45,10 +45,10 @@ Next나 Gatsby의 **파일기반 정적 라우팅 방식**처럼 사용자가 �
 ./posts
 ├── index.md # 홈화면 내용
 └── projects # 프로젝트 페이지의 게시물들
-    ├── BE # 세부 카테고리 (사이드바 카테고리에 포함)
+    ├── BackEnd # 세부 카테고리 (사이드바 카테고리에 포함)
     │   ├── 10plusServer.md
     │   └── Cardme.md
-    └── FE # 세부 카테고리 (사이드바 카테고리에 포함)
+    └── FrontEnd # 세부 카테고리 (사이드바 카테고리에 포함)
         ├── 10plusKiosk.md
         ├── Gatsby-starter-oasis-img
         │   ├── CLI-tool.gif
@@ -58,7 +58,7 @@ Next나 Gatsby의 **파일기반 정적 라우팅 방식**처럼 사용자가 �
 ```
 
 **위는 현재 포스트를 작성하는 시점의 일부 폴더구조입니다.**  
-현재 포스트인 `Gatsby-starter-oasis.md` 파일은 `${사용자주소}/projects/FE/Gatsby-starter-oasis/`의 URI로 생성됩니다.
+현재 포스트인 `Gatsby-starter-oasis.md` 파일은 `${사용자주소}/projects/FrontEnd/Gatsby-starter-oasis/`의 URI로 생성됩니다.
 
 이를 구현하기 위해 Gatsby에서 markdown파일만을 조회하는 플러그인 대신 쿼리가 길어질 수 있지만 [전체 파일을 조회하여 필터링](https://github.com/je0ngyun/gatsby-starter-oasis/blob/master/src/pages/projects/index.js#L52) 하는 방식을 사용하였습니다.
 
@@ -66,7 +66,7 @@ Next나 Gatsby의 **파일기반 정적 라우팅 방식**처럼 사용자가 �
 
 페이지기반으로 포스트를 분류했지만 여전히 문제점은 남아있었습니다. 사용자가 새로운 주제의 포스트들을 포함할 페이지를 만들고자 할때 해야할 작업이 많아지기 때문이었습니다. 이를 해결하기 위해 쉬운 페이지 생성을 위한 CLI tool을 개발하였습니다.
 
-![CLI tool](../FE/Gatsby-starter-oasis-img/CLI-tool.gif)
+![CLI tool](../FrontEnd/Gatsby-starter-oasis-img/CLI-tool.gif)
 
 **위는 CLI tool을 실행하여 Life란 이름의 페이지를 생성하는 모습입니다.**  
 만들 페이지 이름 및 페이지 설명을 입력하면 자동으로 Gatsby가 라우팅 하는 `./src/pages/` 폴더에 기입한 정보를 바탕으로 파일이 만들어지고 `./posts/` 폴더의 하위에도 life란 이름의 폴더가 새로 만들어지게 됩니다.  
@@ -91,7 +91,7 @@ const pageMetadata = {
 
 ### 쉬운 포스트 탐색을 위한 사이드바 및 포스트검색기능
 
-![sidebar](../FE/Gatsby-starter-oasis-img/sidebar.gif '#width=50%')  
+![sidebar](../FrontEnd/Gatsby-starter-oasis-img/sidebar.gif '#width=50%')  
 위와같이 페이지 별로 관심사를 분류하는것 만으로는 부족한것 같아 사이드바를 통해 세부적으로 분류된 포스트를 볼 수 있게 하였고 현재 어느 카테고리의 포스트를 읽고있는지 알 수 있게 하이라이트 기능을 추가하였습니다.
 또한 제목 및 태그를 기반으로 검색할 수 있는 검색창도 추가하였습니다.
 
