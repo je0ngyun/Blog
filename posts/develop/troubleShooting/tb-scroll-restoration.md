@@ -1,6 +1,6 @@
 ---
 title: '브라우저에서 뒤로가기시 스크롤 위치 저장을 방지하는법'
-date: '2022-09-26'
+date: '2022-12-05'
 tags: 'History,Scroll,ScrollRestoration'
 ---
 
