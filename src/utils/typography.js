@@ -26,14 +26,14 @@ GitHubTheme.overrideThemeStyles = () => {
     },
 
     h1: {
-      fontWeight: 700,
+      fontWeight: 600,
       lineHeight: 1.3,
       fontFamily: 'Catamaran, Pretendard',
       border: `none`,
     },
 
     h2: {
-      fontWeight: 700,
+      fontWeight: 600,
       lineHeight: 1.3,
       fontFamily: 'Catamaran, Pretendard',
       marginTop: '50px',
