@@ -12,7 +12,7 @@ const config = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
@@ -83,11 +83,10 @@ const config = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: userMetadata.siteUrl,
-        sitemap: `${userMetadata.siteUrl}/sitemap/sitemap-index.xml`,
+        sitemap: `${userMetadata.siteUrl}/sitemap-pages.xml`,
         policy: [
           {
             userAgent: '*',
-            allow: '/',
           },
         ],
       },
