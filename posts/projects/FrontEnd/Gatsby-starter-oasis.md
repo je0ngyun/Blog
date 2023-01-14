@@ -4,7 +4,7 @@ date: '2022-02-21'
 tags: '쉽게 시작하는 풀 패키지 블로그 스타터'
 tech: 'React,Gatsby,Markdown,Sass'
 period: '2022.02 ~ 2022.02'
-desc: '과거에 진행했던 개인 블로그 프로젝트를 리펙토링 및 기능추가하여 제작;하이라이트 기반 UI와 Github Typography 베이스;페이지 기반으로 포스트 관심사들을 1차 분류;페이지내 사이드바의 카테고리로 2차 세부 분류;쉬운 블로그 세팅을 위해 하나의 Config 파일로 통합;빠른 페이지 생성을 위한 CLI tool 제공;포스트 검색기능 제공;Lighthouse Report를 참고하여 퍼포먼스를 향상;GA, SEO, RSS, Sitemap, Robots.txt 적용 및 제공'
+desc: '과거에 진행했던 개인 블로그 프로젝트를 리펙토링 및 기능추가하여 제작;하이라이트 기반 UI와 Github Typography 베이스;PC, 테블릿, 모바일 대응을 위한 반응형 UI 적용;파일, 폴더기반 정적 라우팅 방식처럼 블로그 글을 관리할 수 있도록 개발;쉬운 블로그 세팅을 위해 하나의 Config 파일로 통합;빠른 페이지 생성을 위한 CLI tool 제공;포스트 검색기능 TOC기능 구현;Lighthouse Report를 참고하여 퍼포먼스 및 UX를 향상;GA, SEO, RSS, Sitemap, Robots.txt 적용 및 제공'
 ---
 
 ![main-intro](../FrontEnd/Gatsby-starter-oasis-img/intro-img.png)
