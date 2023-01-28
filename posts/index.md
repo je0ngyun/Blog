@@ -16,10 +16,6 @@
 코드 리뷰, 대화 등 교류를 통해 피드백과 의견을 주고받는 것을 좋아하며 같이 발전할 수 있는 환경을 선호합니다.  
 <br/>
 
-### Portfolio
-
-- [Portfolio - KR](https://crimson-cattle-a0a.notion.site/49d7c48b89404be2b153e0eb84585ab5)
-
 ### Channel
 
 - [Github](https://github.com/je0ngyun)
