@@ -16,12 +16,11 @@ const pageMetadata = {
   //If you do not want to add a link to the navbar, you can leave it blank.
   menu: [
     { path: '/', linkname: 'Home' },
-    { path: '/projects', linkname: 'Projects' },
     { path: '/develop', linkname: 'Develop' },
   ],
   //directorys - Enter the directory to be mapped with the page.
   //That directory is automatically linked to the gatsby filesystem.
-  directorys: ['develop', 'projects'],
+  directorys: ['develop'],
 }
 
 exports.pageMetadata = (() => {
